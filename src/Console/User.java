@@ -40,6 +40,11 @@ public class User {
 		this.phones = phones;
 	}
 
+	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", email=" + email + ", phones=" + phones + "]";

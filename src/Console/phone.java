@@ -1,20 +1,27 @@
 package Console;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class phone {
-	private long phone;
+	private List<String> Phone=new ArrayList<>();
 	private String mail;
 	@Override
 	public String toString() {
-		return "phone [phone=" + phone + "]";
+		return "phone [phone=" + Phone + "]";
 	}
 
 	
-	public phone(long phone, String mail) {
+	public phone(List<String> phone, String mail) {
 		super();
-		this.phone = phone;
+		this.Phone = phone;
 		this.mail = mail;
 	}
 
+
+	public phone() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getMail() {
 		return mail;
@@ -26,12 +33,33 @@ public class phone {
 	}
 
 
-	public long getPhone() {
-		return phone;
+	public List<String> getPhone() {
+		return Phone;
+	}
+	
+	public  void setPhone(List<String> phone) {
+		this.Phone = phone;
+	}
+	public void replacePhone(String ph1,String ph2)
+	{
+		int i=0;
+		for(String str :Phone)
+		{
+			if(str.equals(ph1))
+			{
+				
+				Phone.set(i, ph2);
+				System.out.println("SuccessFully replaced");
+			}
+			i++;
+		}
 	}
 
-	public  void setPhone(long phone) {
-		this.phone = phone;
+
+	public void addPhone(String ph) {
+		// TODO Auto-generated method stub
+		Phone.add(ph);
+		
 	}
 
 }
